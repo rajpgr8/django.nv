@@ -61,3 +61,17 @@ safety check -r requirements.txt --json | tee safety_output.json
 
 How to Embed Safety into GitHub Actions?
 => See file .github/workflows/main.yaml
+```
+
+
+```
+Software Component Analysis using Snyk:
+
+wget -O /usr/local/bin/snyk https://github.com/snyk/snyk/releases/download/v1.573.0/snyk-linux
+chmod +x /usr/local/bin/snyk
+snyk --help
+snyk test --json .
+
+```
+
+
