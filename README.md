@@ -49,3 +49,13 @@ The only mail sent by the app is for the "Forgot Password" feature. You can use 
 If you prefer to use your own mailserver, simply add your settings to `settings.py`.
 
 AppSec EU is awesome!
+
+---
+Commands:
+pip3 install safety
+safety check --help
+safety check -r requirements.txt --json | tee safety_output.json
+
+- -r flag used to specify the input file.
+- –json flag tells that output should be in the JSON format.
+---
