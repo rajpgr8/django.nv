@@ -58,4 +58,6 @@ safety check -r requirements.txt --json | tee safety_output.json
 
 - -r flag used to specify the input file.
 - –json flag tells that output should be in the JSON format.
-```
+
+How to Embed Safety into GitHub Actions?
+=> See file .github/workflows/main.yaml
