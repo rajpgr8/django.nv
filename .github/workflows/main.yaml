@@ -9,6 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest                    # similar to "image" in GitLab
     steps:
+      - run: echo "This is a build step."
       - uses: actions/checkout@v2
 
       - name: Setup python
@@ -27,6 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - run: echo "This is a test step."
       - uses: actions/checkout@v2
 
       - name: Setup python
@@ -45,6 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
+      - run: echo "This is a oast step."
       - uses: actions/checkout@v2
 
       - run: docker run --rm -v $(pwd):/src hysnsec/safety check -r requirements.txt --json | tee oast-results.json
